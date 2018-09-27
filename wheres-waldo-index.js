@@ -1,12 +1,9 @@
-var result = []; //store data from functions into global variables for access
-
 //forEach method
 //forEach(function(element, index, array))
 function findWaldo(arr, found) {
   arr.forEach(function(word, i) {
     if (word === "Waldo") {
-      result = i;
-      found();
+      found(i);
       }
   })
 };
@@ -15,14 +12,13 @@ function findWaldo(arr, found) {
 // function findWaldo(arr, found) {
 //   for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] === "Waldo") {
-//       result = i;
-//       found();
+//       found(i);
 //     }
 //   }
 // }
 
-function actionWhenFound() {
-  console.log("Found Waldo at index " + result + "!");
+function actionWhenFound(i) {
+  console.log("Found Waldo at index " + i + "!");
 }
 
 findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
