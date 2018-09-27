@@ -1,6 +1,6 @@
 var result = []; //store data from functions into global variables for access
 
-//for each statement
+//forEach method
 //forEach(function(element, index, array))
 function findWaldo(arr, found) {
   arr.forEach(function(word, i) {
