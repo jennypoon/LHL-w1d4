@@ -4,7 +4,9 @@ var students = [
   { id: 3, name: "alex",     age: 22 },
   { id: 4, name: "alex",     age: 30 }
 ];
-
+//sort()
+//need to defines a function for action
+//you need identify two parameters if you're comparing
 students.sort(function(a,b){
   var x = a.name;
   var y = b.name;

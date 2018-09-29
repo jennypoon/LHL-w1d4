@@ -1,7 +1,7 @@
 //forEach method
 //forEach(function(element, index, array))
 function findWaldo(arr, found) {
-  arr.forEach(function(word, i) {
+  arr.forEach(function(word, i) { //redefine element as word
     if (word === "Waldo") {
       found(i);
       }
