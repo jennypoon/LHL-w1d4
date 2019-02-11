@@ -1,0 +1,265 @@
+Received: from CY1NAM02HT127.eop-nam02.prod.protection.outlook.com
+ (2603:10b6:903:1f::13) by CY1PR04MB1948.namprd04.prod.outlook.com with HTTPS
+ via CY4PR01CA0003.PROD.EXCHANGELABS.COM; Thu, 27 Sep 2018 18:06:18 +0000
+Received: from CY1NAM02FT055.eop-nam02.prod.protection.outlook.com
+ (10.152.74.52) by CY1NAM02HT127.eop-nam02.prod.protection.outlook.com
+ (10.152.74.183) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.20.1185.13; Thu, 27
+ Sep 2018 18:06:17 +0000
+Authentication-Results: spf=pass (sender IP is 198.2.187.28)
+ smtp.mailfrom=mandrillapp.com; live.ca; dkim=pass (signature was verified)
+ header.d=mail187-28.suw11.mandrillapp.com;live.ca; dmarc=none action=none
+ header.from=lighthouselabs.ca;
+Received-SPF: Pass (protection.outlook.com: domain of mandrillapp.com
+ designates 198.2.187.28 as permitted sender) receiver=protection.outlook.com;
+ client-ip=198.2.187.28; helo=mail187-28.suw11.mandrillapp.com;
+Received: from mail187-28.suw11.mandrillapp.com (198.2.187.28) by
+ CY1NAM02FT055.mail.protection.outlook.com (10.152.74.80) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.20.1185.13 via Frontend Transport; Thu, 27 Sep 2018 18:06:17 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:406184FDAA135046C8AB0AF6BDB429A7822D7409B65C33C7633A1685C63C0BF5;UpperCasedChecksum:F4EB2001C9C561DD03CA68282F2AEC8720E719B93499F49EA459D0F42B097254;SizeAsReceived:2102;Count:16
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=mail187-28.suw11.mandrillapp.com;
+ h=From:Sender:Subject:To:Message-Id:Date:MIME-Version:Content-Type; i=compass@mail187-28.suw11.mandrillapp.com;
+ bh=88aiCovL0irHUhCdT4ZHcQilDp9n05D42zkGfYCy+y4=;
+ b=G56Kr6wdelBAhHISS0PZVgGKoVfhU3uUPreLkBzNSfjztWWGQECX7YiCkoT7iSxiX38R2vIgR695
+   3AHUrOamuIbxFi7oy1Ko3KBgmj8YOXb2vaFfXYgZjEXuqGSfu1ZdtPgFqB5vpvjIjTwgdZMheXnT
+   aL+YvCDuPJznhD2OS0M=
+Received: from pmta01.mandrill.prod.suw01.rsglab.com (127.0.0.1) by mail187-28.suw11.mandrillapp.com id hlke1i174i4p for <jenny.poon@live.ca>; Thu, 27 Sep 2018 18:06:17 +0000 (envelope-from <bounce-md_30244704.5bad1c19.v1-980fc3a6998a49f6b688959c5aa0d172@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1538071577; h=From : 
+ Sender : Subject : To : Message-Id : Date : MIME-Version : Content-Type 
+ : From : Subject : Date : X-Mandrill-User : List-Unsubscribe; 
+ bh=88aiCovL0irHUhCdT4ZHcQilDp9n05D42zkGfYCy+y4=; 
+ b=lakAlZKyAveJbQXO+VMefcJMlDHKpnvk9YAfvX5OfHEHUgb9RNEhVyD8GNAFKh/V7QUlBF
+ SKTxbSZJ7CJ41WyRhmdCUp2Daxf1+1EuwDCv3sjFx1VqRUr0m69OjV9b5NZskBkQu+LnEMHg
+ vpljyiVzNqhUlcFuzU2gvQZdymwsE=
+From: <compass@lighthouselabs.ca>
+Sender: <compass@mail187-28.suw11.mandrillapp.com>
+Subject: W01D4 Lecture: Callbacks
+Return-Path:
+ bounce-md_30244704.5bad1c19.v1-980fc3a6998a49f6b688959c5aa0d172@mandrillapp.com
+Received: from [138.197.161.166] by mandrillapp.com id 980fc3a6998a49f6b688959c5aa0d172; Thu, 27 Sep 2018 18:06:17 +0000
+To: <web-teachers-vancouver@lighthouselabs.ca>
+Message-Id: <5bad1c17d5d3_1442b0736caa22014195d@74aa69752092.mail>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30244704.980fc3a6998a49f6b688959c5aa0d172
+X-Mandrill-User: md_30244704
+Date: Thu, 27 Sep 2018 18:06:17 +0000
+Content-Type: multipart/alternative; boundary="_av-p8VLLGqp5Eoqk8IY48zuYw"
+X-IncomingHeaderCount: 16
+X-MS-Exchange-Organization-ExpirationStartTime: 27 Sep 2018 18:06:17.5850
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: Original Submit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: Original Submit
+X-MS-Exchange-Organization-Network-Message-Id: 651ace59-468d-44b3-7641-08d624a3ebeb
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Microsoft-Exchange-Diagnostics: 1;CY1NAM02FT055;1:Xlm7KF/6EMuq7qe9oaOc5vDAUADcB+2MXJqoDwBMcJVTy/4MoAQuWB8nhp6NpYDx5SgC4LgF/YQFRsJXwB1PCBkX4tUL9JgR51JoumE4YfQOBZM7ML9Ur3+geEl1dNk0
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ CY1NAM02FT055.eop-nam02.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 651ace59-468d-44b3-7641-08d624a3ebeb
+X-Microsoft-Antispam:
+ BCL:0;PCL:0;RULEID:(5000110)(711020)(4605076)(610169)(8291501071);SRVR:CY1NAM02HT127;
+X-Microsoft-Exchange-Diagnostics:
+ 1;CY1NAM02HT127;3:zvsQamYvUKLhGt3PW7woUYjHfVDtS3GDzb6f/fcdF8shMFAejVCvDrQw/WFP0lOU/z+gYRGt/lGME2+SzQ0yWCRfTMfwtz+dr/CtLgQ/QYYDuUSh3yKVabQupXGpGxEcW9Lvw/3TRXQiSEXaz4ZC/CXOcyfArN6JBe62PEAl4ZMtTPpm7hwKxzlLfs8qQyQDbeap6jCIsCBw54rtXVNenaJTOgWpBOO6vJSWHEkkR1KXvmxMC4Umc3mtVkUflCFS6Xkdz4yOK4W7myhe5iGyRo/I95c1g+bSXula6dVJuYAOYZSnI7ySyi3LodzPv4Zt;25:GvDpERUovs6S3hHaluLljcQTDzYv6A1/KMGhZ2jwXioFC6dxMJKH6kLLfK+FbD8Qk675yl6XQRiMiLJJjCXH0Txse5UboGqbwae4ywPWZ38TTX/FdNzHKRRjD0vfJZpxVZTbUdjT4p5lrYtQR9iOme279rsxP+C6V3BkG0L+1DK/c1BvyfuFXuhqeiPaqN7J4wfQ0tJnLgj+Ydy7GFa3YBrCkCH+fcR1RXUNe7XDira0MMjHAtgwbDSilGzqhOoUysfSqQIvpE4VIGLo8EKtYmU+JzdhdsFxpqQOer0sqRbX+Djn36I4KJHzZFzPENW4vW6nitHLZJDsq3LeRzb+CA==;31:S1FhQ5ipBTcIBPFd4C1udXL1cNxfNIw++EmU6iUUvn3Y/NxY28VP5XpkzrQmDTTP3V/K9/UCejaWT3gYgEcP4pBL5bJ/SmcVcC2Tzt+sKBFnyAbtG1Qh7ARpg+B1lcjYOcF4l7YmKXMpbnCyajMMUndgxelv8B/OQ0Z0G52/uNuqAQh2Om27UOtuJnyfz2ejJBJtxRkQYocz8HvH1oeDfCn6X6YmtOSMcx81MGJADss=
+X-MS-TrafficTypeDiagnostic: CY1NAM02HT127:
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 198.2.187.28
+X-SID-PRA: COMPASS@LIGHTHOUSELABS.CA
+X-SID-Result: NONE
+X-MS-Exchange-Organization-PCL: 2
+X-Exchange-Antispam-Report-Test:
+ UriScan:(192278398808882)(166708455590820)(190501279198761)(227612066756510)(187274545019280);
+X-Exchange-Antispam-Report-CFA-Test:
+ BCL:0;PCL:0;RULEID:(444111676)(52401380)(52601095)(52606095)(52505095)(52406095)(52404095)(88862240)(88860193)(82015058);SRVR:CY1NAM02HT127;BCL:0;PCL:0;RULEID:;SRVR:CY1NAM02HT127;
+X-Microsoft-Exchange-Diagnostics:
+ =?utf-8?B?MTtDWTFOQU0wMkhUMTI3OzQ6RUlWSjkxbFh1Rm9XSkgyYVM0YjdhcFowbDFB?=
+ =?utf-8?B?TEtUNTdHUWJTdFZzR2oyNUFXTVlkYWVjTnZEU0M2VjhnUFBScWNaNFhpZTJ1?=
+ =?utf-8?B?YW1wMGZDRkxkb21BNUpXd0ZtVEZ3REhMdGMvZTFaWHFFRzdZR1lmY1hUR09h?=
+ =?utf-8?B?eG9FT2JmM2JqUkhWSHNTbnNOWWx4SUlJVDI3akU3RGRNMGxhUjhhZ0pyd1gw?=
+ =?utf-8?B?UlY0b0Fhcm9zRmlYNjNERGViR293a3RSVjV3TDltNlB2RUpFM1prUTlvekJK?=
+ =?utf-8?B?S2JSTTV5S1pwK0RIdkROcG9aVExwTlVUZW4yalZtUzY2bUxZMyt4dW8vVVp0?=
+ =?utf-8?B?ZFIxNlcwa3lidHVYS1B6Mk9tbVlGVWxEQUlNTndrRjlzUFIzZTJtQ2xnTU45?=
+ =?utf-8?B?UVJGL0tkVVVhYkZ2c2FFUUhEV2RCNS85eXlKQ2k3dUlTRU13Z29DS2RlNkQ5?=
+ =?utf-8?B?TGZPUEFpQUU2U2U0SlZmMEl5NVI4NGNMd0dVSDBxRmNLbnUvbEVtSmJVSU5V?=
+ =?utf-8?B?S3R2WEtZckdkVjNPRUFqQllvOU4yWkZ5YVVaVXlZMFlVRGNOZ2l5RmZrMm5r?=
+ =?utf-8?B?RHZQc04rNEVkVnNKOVpPNGZBbWU4b0YrWTZsSy92OGlZRTNlOUE9PTs2Onhy?=
+ =?utf-8?B?czd5SWtpZkxLdjZ1bk9iWXBmWGNsdWMwRUdRU2FzRVI4VHJDOXRPeE1FV3k3?=
+ =?utf-8?B?R2lYQjhmaTMzL0o1ek9Bek1ROHQ0eDdHb0dhdkFycmdhT0phZUdhMjQ3Yk1V?=
+ =?utf-8?B?bzRlNGVsWjNjT2U5WWJrUjdEYW01elR0VXdsT1dQb0p2QUYyOHFCNWVlUWlt?=
+ =?utf-8?B?V0tBUmxGejdTSlNzSi9Vc0ZhRE5PQjdZSGRrTmQvaHV4VHk4UzVaR092M3FJ?=
+ =?utf-8?B?RVFBS3BCZ2xRaUxSZTVXTkFjQ1NyYXhqbkQxU2QwWEE4WEphaDI0OWMvN3hU?=
+ =?utf-8?B?L3R5eWY1b0ltckN3T01XcHJOM2pyQ1BFTmlEZFpTQWJrT05qenNNcmJicnJl?=
+ =?utf-8?B?THJZNGZvMy9JeTQzNm9uVmlXcElmb2xEOXZkcWFaWlA4N2dFMXZYdHJJVDlM?=
+ =?utf-8?B?ZmdIbDlFWGhWTFpJQi85Y0cwTGpLaDRFNjc3QzdEQitSdk9zaHNLT2FnczlB?=
+ =?utf-8?B?bHdQcGo0aDJia2VJN3ZuN2ppZm1xREVJZGpvUVBiRU1XNDNlNnFVVmtMMmxj?=
+ =?utf-8?B?MEJTZ0RvOUJwZk0zT2JRSGpsdHJzTXRqSlRqUm53TTJzYUs3aHhEazNwKzE0?=
+ =?utf-8?B?aXdDYTc1eUJGVVJYMFE0VHdBPT0=?=
+X-Microsoft-Antispam-Message-Info:
+ Mps79s87od1k6D0Y2Xz3/3qg3RLx3phiSfMdByHNf8lLijXtU/a5onayHDbLFh7MXmoTnq54xhjEGpQNnownzrDh3ZqcBkG+vDvO1Fu/aybuQ2QPHh7zYxGGYZTKFy2RMvBNnM6jceGqsz2uh+ByWgwtSrS7isUKB0l0JUGFwmy9JYs68ReoC4m2XKLb9pkC8XFPav1uziOj1jlT0riJMNGcOiY5C1UnIL1r4lruyGu5qMXwPrfegKq298E8Mf3knPqW/XBWkq+sktenmBOZDzc2486hU4UMocDsUXGJj9DLokMlWWw61oDrb/r/yUU7FnyIdXihq7iKntYEXoAYb2J6TQ5pvNxXTbdV8eNmLrsPvSd9NUjXjkiPpU0Ne+ubrLjWjW4HFVl5RGPeNIMaIYTMAoOkD8MK5rtxixqmC3A=
+X-Microsoft-Exchange-Diagnostics:
+ 1;CY1NAM02HT127;5:RL7PDv/q9vC1G2UiJJuC2rYbLzy3bMA5FpIqvbKIPJ1+5l3CEFAhMWK+zGHqIb4GjXjDA/LeVlsoCZ8y9EvHIIyWKRN6fzaZ75EugxhG/Oa4KYC5iiSa2R8vYOKo9Vj9J3gBMmpeAb+FO2Vxq96sbRY6pVRprIyqE4DY9PV/xBU=;7:eHJo1/pEvi0w4E6F3HuoDDZcn5Slbe5ea7nLAL/bIob56hSbr55+KUTa2gjQoATj9ry8CWcMXG9cfQJb/6cU3WmK57aKR4wRdaiqe0p9lvohVELhiCR0gTD6B12/QZZCmmD7YTzLsBeiKlUHr6LSbQQhZxZ0X6hPMsuxLcsuH4LZKhe1EeTsyyPTW7bGvF2ujB28UDdV1Ez5WOEeYbzz+yYf8hJUNIgOMGPv5pJ6s4B5+fn64NRGLTewZYpX2V/Z
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 27 Sep 2018 18:06:17.4443
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 651ace59-468d-44b3-7641-08d624a3ebeb
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 9bd8b953-1c55-4da7-b616-8bcad099ae8b
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT127
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.6594775
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1164.016
+X-Microsoft-Exchange-Diagnostics:
+	1;CY1PR04MB1948;27:Rvlac5pUMhTbtGp/h/EBWgmGJGv2Fn52l+VXxv4HMQJ4P+WdFYEY4+tW4DtY8rJS8WJrlJ4ZLVTjJIbaI0GGuQF5fe27iY6j8POH0gO7ZAIvGC1RwFo+ea5C3TnD5HupR1GglEbGiUUF3byfEWu3F1AS7L4Je7G8ujZw7T0kePtu7lYJLJBLbddonz7EmEAcXqc+4/xpTb4JEYPhIUJFTucEK+bqJ8yO0h3HcVijv9lSF/VxLcP2kWhquRwh8COA21SZJfR3RcwvDWePvQdmjNipM9Qoo/7UWrx2yD7vJasuqFaTzcCPnU/PJCOtmofJm1ldC4fkUDeicdrPeJy5+aVD8UPzwVUJ5kcVJmi9JuKOTlRt0144KTH9y/DgZINEXwiabTVlBx/0WfWEw6YKHqy89yD/pN0hxTlvMF9N/Inw1/gffapgdrKPRI5K/VRd3UWPq/RT0dJtRvruOMoH5uRcg4N1XaeCWzI+CBoC2krxLUcKVEJ/bjW73FUvRhgG7afKAqHSiyLQKubmrZyK2Z7BoctX44ECF8hZTMyIKJwa1O8Q/RAq3Od8Ny8d2HL2qrLv5XT6TffZQaO/OfAeobuLcZcx+9eEXcJ6+F2M7q2wNj6519rksep2RYUhdaPPiWSgeAhnHpay8NfMbtxPiw==
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;psp:0;auth:0;dest:I;ENG:(5062000261)(5061607266)(5061608174)(4900095)(4920089)(6515079)(4950130)(4990090);
+X-Message-Info:
+	5vMbyqxGkddbHVl68g2w30y6tKVc2a5HEcwoLJn93+wdPiurFobJkCcA4skBZ86furFknwVjx9+nnxWmVgTKa+lOW8ECamD/oSu41ETZS9e0oZHtVHiEEumyvpziqRCzt2yHIb6yc7VSbPwjLSAoAJ4xyZFn2/ykPHasSgr+Ij+c388n5vCNIU6yijumYkMq5iNbnzRayClSlxND0zYp/Q==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	20geQQNywZu/YlYSrgO/OEIpo/L9gVxpuM1Azjr5jVGI16S1ezYe+Nbg0TWGNjjKp8cSpErzZmzYprH80r04j/rcbXZF6cYPz49JFO7bgbhQEC6hMKcuY8Zbtq3lVySp2l57s/vdMwzm3k+llgLyypFrPklx19PDJQ67MGprn8FpwMWGRaZs6gZ6zAdoFY6oiekLIsBLEcSnjcKxIOWaKhBV9cb4vK8dYctc4kfzPUDti7uCb3u33DJ9I9r/gUyj55e0Hh0NZhVcO+ZdvuElJFp5K+hMnoHn7gwfJlHJDpY8ovu9DFp+q6uqv+BfsB2G/nv0kzDqRfuwjA7j6bWx4Giz9A3ZwHoCePqK3SOotroN08l5Yn8UWwVvQnlxmcvtaYaZupnkEfeCOWALfJXhrDPUAko67USNeFlzQ6Z9r4Ov9bzvLSFjvY15YZ7VwGz4/NuHm/PJDc+OUFXNMGDX83K/BElubZOLDq5EXPyEkTjeA0MpbfiUHJSrtQsYWAIpF97uThaco/mZMjUX2ZN27fJkvHF+2Pd2Psp1D33sx5uYTjkHfCADj6iXNIISDzVZ2G1tYyyzgcb8m41TfQ9kZgoua8+Pc+3eEDnRG4WcQdDFMTU5xe6Q+nmiKFqwKOP5
+MIME-Version: 1.0
+
+--_av-p8VLLGqp5Eoqk8IY48zuYw
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+---------
+Callbacks
+---------
+
+*********
+Callbacks
+*********
+
+A scheduled response to an event
+
+Always represented as a function
+
+function doStuffWithNumbers(x, y, callback) {
+var result = callback(x, y);
+
+return result;
+}
+
+doStuffWithNumbers(4, 8, function(a, b) {
+return a * b;
+});
+
+We then did some examples using the declarative functions JS
+provides on arrays. We re-implemented forEach, map, and find.
+
+The code for those is here 
+( https://gist.github.com/b8b420e5491d2ad2a0297803af097c21 ).
+
+We also talked about some philosophy behind using functions.
+
+//Function declaration
+function a() {
+console.log("a");
+}
+
+b(); //This will fail
+
+//Function expression
+var b = function() {
+console.log("b");
+};
+
+var c = "cat";
+
+a()
+b()
+c(); //Whomp whomp, not a function
+
+Side effects
+------------
+
+//Side effects
+function a() {
+return "a";
+}
+
+var result = a();
+console.log(result);
+
+Always better to have your function do the work and return the
+results. Logging is a side-effect.
+
+Don Burks
+
+--_av-p8VLLGqp5Eoqk8IY48zuYw
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+<h2>Callbacks</h2>
+
+<h1>Callbacks</h1>
+
+<p>A scheduled response to an event</p>
+
+<p>Always represented as a function</p>
+<pre><code class="language-js allow-select">function doStuffWithNumbers(x, y, callback) {
+  var result = callback(x, y);
+
+  return result;
+}
+
+doStuffWithNumbers(4, 8, function(a, b) {
+  return a * b;
+});
+</code></pre>
+<p>We then did some examples using the declarative functions JS provides on arrays. We re-implemented <code>forEach</code>, <code>map</code>, and <code>find</code>. </p>
+
+<p>The code for those is <a href="https://mandrillapp.com/track/click/30244704/gist.github.com?p=eyJzIjoiQlVETHBaWDBkRTlTaXBCcHM1cDEzNkRGYTNFIiwidiI6MSwicCI6IntcInVcIjozMDI0NDcwNCxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL2dpc3QuZ2l0aHViLmNvbVxcXC9iOGI0MjBlNTQ5MWQyYWQyYTAyOTc4MDNhZjA5N2MyMVwiLFwiaWRcIjpcIjk4MGZjM2E2OTk4YTQ5ZjZiNjg4OTU5YzVhYTBkMTcyXCIsXCJ1cmxfaWRzXCI6W1wiNTVhNDBlM2ExNWFmYzk4ODc1NmQ1ZjdiZmVkYjdiNDk5YmY2ZmEyN1wiXX0ifQ" target="_blank">here</a>.</p>
+
+<p>We also talked about some philosophy behind using functions.</p>
+<pre><code class="language-js allow-select">//Function declaration
+function a() {
+  console.log(&quot;a&quot;);
+}
+
+b(); //This will fail
+
+//Function expression
+var b = function() {
+  console.log(&quot;b&quot;);
+};
+
+var c = &quot;cat&quot;;
+
+a()
+b()
+c(); //Whomp whomp, not a function
+</code></pre>
+<h3>Side effects</h3>
+<pre><code class="language-js allow-select">//Side effects
+function a() {
+  return &quot;a&quot;;
+}
+
+var result = a();
+console.log(result);
+</code></pre>
+<p>Always better to have your function do the work and return the results. Logging is a side-effect.</p>
+
+
+<hr>
+
+<p>
+  Don Burks
+</p>
+<img src="https://mandrillapp.com/track/open.php?u=30244704&amp;id=980fc3a6998a49f6b688959c5aa0d172" height="1" width="1"></body></html>
+
+
+--_av-p8VLLGqp5Eoqk8IY48zuYw--
